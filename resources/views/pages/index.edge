@@ -39,12 +39,14 @@
         <p>
           &emsp;{{ detailItem.body }}
         </p>
-        <div class="ui segment">
-          <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
-          <pre id="code-{{ detailItem.id }}">
-            <code>{{ detailItem.code }}</code>
-          </pre>
-        </div>
+        @if(detailItem.code)
+          <div class="ui segment">
+            <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
+            <pre id="code-{{ detailItem.id }}">
+              <code>{{ detailItem.code }}</code>
+            </pre>
+          </div>
+        @end
       </div>
     @endeach
   @end

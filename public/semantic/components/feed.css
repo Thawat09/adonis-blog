@@ -8,7 +8,6 @@
  *
  */
 
-
 /*******************************
          Activity Feed
 *******************************/
@@ -23,11 +22,9 @@
   margin-bottom: 0em;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /* Event */
 .ui.feed > .event {
@@ -78,7 +75,6 @@
 /*--------------
      Content
 ---------------*/
-
 
 /* Content */
 .ui.feed > .event > .content {
@@ -152,7 +148,6 @@
    Inline Date
 ---------------*/
 
-
 /* Date inside Summary */
 .ui.feed > .event > .content .summary > .date {
   display: inline-block;
@@ -225,10 +220,10 @@
   transition: 0.2s color ease;
 }
 .ui.feed > .event > .content .meta .like:hover .icon {
-  color: #FF2733;
+  color: #ff2733;
 }
 .ui.feed > .event > .content .meta .active.like .icon {
-  color: #EF404A;
+  color: #ef404a;
 }
 
 /* First element */
@@ -253,7 +248,6 @@
   color: rgba(0, 0, 0, 0.95);
 }
 
-
 /*******************************
             Variations
 *******************************/
@@ -268,14 +262,10 @@
   font-size: 1.14285714rem;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
     User Variable Overrides
 *******************************/
-

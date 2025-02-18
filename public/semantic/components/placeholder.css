@@ -16,11 +16,16 @@
   position: static;
   overflow: hidden;
   -webkit-animation: placeholderShimmer 2s linear;
-          animation: placeholderShimmer 2s linear;
+  animation: placeholderShimmer 2s linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  background-color: #FFFFFF;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.08) 30%);
+  animation-iteration-count: infinite;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.15) 15%,
+    rgba(0, 0, 0, 0.08) 30%
+  );
   background-size: 1200px 100%;
   max-width: 30rem;
 }
@@ -45,26 +50,26 @@
 }
 .ui.placeholder + .ui.placeholder {
   -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 .ui.placeholder + .ui.placeholder + .ui.placeholder {
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
   -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
+  animation-delay: 0.45s;
 }
 .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .ui.placeholder,
 .ui.placeholder > :before,
 .ui.placeholder .image.header:after,
 .ui.placeholder .line,
 .ui.placeholder .line:after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 /* Image */
@@ -74,15 +79,15 @@
 .ui.placeholder .square.image:not(.header) {
   height: 0px;
   overflow: hidden;
-  
-/* 1/1 aspect ratio */
+
+  /* 1/1 aspect ratio */
   padding-top: 100%;
 }
 .ui.placeholder .rectangular.image:not(.header) {
   height: 0px;
   overflow: hidden;
-  
-/* 4/3 aspect ratio */
+
+  /* 4/3 aspect ratio */
   padding-top: 75%;
 }
 
@@ -187,21 +192,24 @@
 
 /* Inverted Content Loader */
 .ui.inverted.placeholder {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.14) 15%, rgba(255, 255, 255, 0.08) 30%);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.14) 15%,
+    rgba(255, 255, 255, 0.08) 30%
+  );
 }
 .ui.inverted.placeholder,
 .ui.inverted.placeholder > :before,
 .ui.inverted.placeholder .image.header:after,
 .ui.inverted.placeholder .line,
 .ui.inverted.placeholder .line:after {
-  background-color: #1B1C1D;
+  background-color: #1b1c1d;
 }
-
 
 /*******************************
             Variations
 *******************************/
-
 
 /*-------------------
         Sizes

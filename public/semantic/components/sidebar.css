@@ -8,11 +8,9 @@
  *
  */
 
-
 /*******************************
             Sidebar
 *******************************/
-
 
 /* Sidebar Menu */
 .ui.sidebar {
@@ -20,7 +18,7 @@
   top: 0;
   left: 0;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
@@ -37,7 +35,7 @@
 /* GPU Layers for Child Elements */
 .ui.sidebar > * {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /*--------------
@@ -102,7 +100,7 @@ body.pushable {
 .pushable > .fixed {
   position: fixed;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 500ms ease;
   will-change: transform;
   z-index: 101;
@@ -115,14 +113,14 @@ body.pushable {
 .pushable > .pusher {
   position: relative;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   overflow: hidden;
   min-height: 100%;
   transition: transform 500ms ease;
   z-index: 2;
 }
 body.pushable > .pusher {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 /* Pusher should inherit background from context */
@@ -155,11 +153,9 @@ body.pushable > .pusher {
   border-radius: 0em !important;
 }
 
-
 /*******************************
             States
 *******************************/
-
 
 /*--------------
      Dimmed
@@ -228,25 +224,21 @@ body.pushable > .pusher {
        iOS
 ---------------*/
 
-
-
 /*******************************
           Variations
 *******************************/
 
-
 /*--------------
      Width
 ---------------*/
-
 
 /* Left / Right */
 .ui.thin.left.sidebar,
 .ui.thin.right.sidebar {
   width: 150px;
 }
-.ui[class*="very thin"].left.sidebar,
-.ui[class*="very thin"].right.sidebar {
+.ui[class*='very thin'].left.sidebar,
+.ui[class*='very thin'].right.sidebar {
   width: 60px;
 }
 .ui.left.sidebar,
@@ -257,8 +249,8 @@ body.pushable > .pusher {
 .ui.wide.right.sidebar {
   width: 350px;
 }
-.ui[class*="very wide"].left.sidebar,
-.ui[class*="very wide"].right.sidebar {
+.ui[class*='very wide'].left.sidebar,
+.ui[class*='very wide'].right.sidebar {
   width: 475px;
 }
 
@@ -267,16 +259,16 @@ body.pushable > .pusher {
 .ui.visible.thin.left.sidebar ~ .pusher {
   transform: translate3d(150px, 0, 0);
 }
-.ui.visible[class*="very thin"].left.sidebar ~ .fixed,
-.ui.visible[class*="very thin"].left.sidebar ~ .pusher {
+.ui.visible[class*='very thin'].left.sidebar ~ .fixed,
+.ui.visible[class*='very thin'].left.sidebar ~ .pusher {
   transform: translate3d(60px, 0, 0);
 }
 .ui.visible.wide.left.sidebar ~ .fixed,
 .ui.visible.wide.left.sidebar ~ .pusher {
   transform: translate3d(350px, 0, 0);
 }
-.ui.visible[class*="very wide"].left.sidebar ~ .fixed,
-.ui.visible[class*="very wide"].left.sidebar ~ .pusher {
+.ui.visible[class*='very wide'].left.sidebar ~ .fixed,
+.ui.visible[class*='very wide'].left.sidebar ~ .pusher {
   transform: translate3d(475px, 0, 0);
 }
 
@@ -285,29 +277,26 @@ body.pushable > .pusher {
 .ui.visible.thin.right.sidebar ~ .pusher {
   transform: translate3d(-150px, 0, 0);
 }
-.ui.visible[class*="very thin"].right.sidebar ~ .fixed,
-.ui.visible[class*="very thin"].right.sidebar ~ .pusher {
+.ui.visible[class*='very thin'].right.sidebar ~ .fixed,
+.ui.visible[class*='very thin'].right.sidebar ~ .pusher {
   transform: translate3d(-60px, 0, 0);
 }
 .ui.visible.wide.right.sidebar ~ .fixed,
 .ui.visible.wide.right.sidebar ~ .pusher {
   transform: translate3d(-350px, 0, 0);
 }
-.ui.visible[class*="very wide"].right.sidebar ~ .fixed,
-.ui.visible[class*="very wide"].right.sidebar ~ .pusher {
+.ui.visible[class*='very wide'].right.sidebar ~ .fixed,
+.ui.visible[class*='very wide'].right.sidebar ~ .pusher {
   transform: translate3d(-475px, 0, 0);
 }
-
 
 /*******************************
           Animations
 *******************************/
 
-
 /*--------------
     Overlay
 ---------------*/
-
 
 /* Set-up */
 .ui.overlay.sidebar {
@@ -358,7 +347,6 @@ body.pushable > .pusher {
       Push
 ---------------*/
 
-
 /* Initial */
 .ui.push.sidebar {
   transition: transform 500ms ease;
@@ -388,7 +376,6 @@ body.pushable > .pusher {
     Uncover
 ---------------*/
 
-
 /* Initial */
 .ui.uncover.sidebar {
   transform: translate3d(0, 0, 0);
@@ -404,7 +391,6 @@ body.pushable > .pusher {
 /*--------------
    Slide Along
 ---------------*/
-
 
 /* Initial */
 .ui.slide.along.sidebar {
@@ -439,7 +425,6 @@ body.pushable > .pusher {
    Slide Out
 ---------------*/
 
-
 /* Initial */
 .ui.slide.out.sidebar {
   z-index: 1;
@@ -472,7 +457,6 @@ body.pushable > .pusher {
 /*--------------
    Scale Down
 ---------------*/
-
 
 /* Initial */
 .ui.scale.down.sidebar {
@@ -528,14 +512,10 @@ body.pushable > .pusher {
   transform: scale(0.75);
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

@@ -8,7 +8,7 @@
         margin: 0;
         padding: 10px;
       }
-
+      
       .copy-btn {
         position: absolute;
         right: 10px;
@@ -20,11 +20,11 @@
         cursor: pointer !important;
         z-index: 10 !important;
       }
-
+      
       .copy-btn:hover {
         background-color: #45a049;
       }
-
+      
       .ui.segment {
         padding: 0;
       }
@@ -50,7 +50,7 @@
       </div>
     @endeach
   @end
-
+  
   @slot('script')
     <script>
       $(document).ready(function() {
@@ -72,7 +72,7 @@
           return $(trigger).prev().text();
         }
       });
-
+      
       clipboard.on("success", function(e) {
         $(e.trigger).css("background-color", "#4CAF50");
         $(e.trigger).text("Copied!");
@@ -81,7 +81,7 @@
           $(e.trigger).text("Copy");
         }, 2e3);
       });
-
+      
       clipboard.on("error", function(e) {
         alert("Failed to copy!");
       });

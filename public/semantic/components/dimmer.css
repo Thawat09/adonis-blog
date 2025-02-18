@@ -8,7 +8,6 @@
  *
  */
 
-
 /*******************************
             Dimmer
 *******************************/
@@ -30,17 +29,17 @@
   opacity: 0;
   line-height: 1;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation-duration: 0.5s;
   transition: background-color 0.5s linear;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   will-change: opacity;
   z-index: 1000;
 }
@@ -48,10 +47,10 @@
 /* Dimmer Content */
 .ui.dimmer > .content {
   -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
-  color: #FFFFFF;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  color: #ffffff;
 }
 
 /* Loose Coupling */
@@ -73,11 +72,9 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
-
 /*******************************
             States
 *******************************/
-
 
 /* Animating */
 .animating.dimmable:not(body),
@@ -99,16 +96,13 @@
   height: 0 !important;
 }
 
-
 /*******************************
            Variations
 *******************************/
 
-
 /*--------------
     Legacy
 ---------------*/
-
 
 /* Animating / Active / Visible */
 .dimmed.dimmable > .ui.animating.legacy.dimmer,
@@ -121,10 +115,10 @@
     Alignment
 ---------------*/
 
-.ui[class*="top aligned"].dimmer {
+.ui[class*='top aligned'].dimmer {
   justify-content: flex-start;
 }
-.ui[class*="bottom aligned"].dimmer {
+.ui[class*='bottom aligned'].dimmer {
   justify-content: flex-end;
 }
 
@@ -152,14 +146,16 @@ body.dimmable > .dimmer {
 
 .blurring.dimmable > :not(.dimmer) {
   -webkit-filter: blur(0px) grayscale(0);
-          filter: blur(0px) grayscale(0);
+  filter: blur(0px) grayscale(0);
   transition: 800ms -webkit-filter ease;
   transition: 800ms filter ease;
-  transition: 800ms filter ease, 800ms -webkit-filter ease;
+  transition:
+    800ms filter ease,
+    800ms -webkit-filter ease;
 }
 .blurring.dimmed.dimmable > :not(.dimmer) {
   -webkit-filter: blur(5px) grayscale(0.7);
-          filter: blur(5px) grayscale(0.7);
+  filter: blur(5px) grayscale(0.7);
 }
 
 /* Dimmer Color */
@@ -189,13 +185,12 @@ body.dimmable > .dimmer {
   background-color: rgba(255, 255, 255, 0.85);
 }
 .ui.inverted.dimmer > .content > * {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /*--------------
      Simple
 ---------------*/
-
 
 /* Displays without javascript */
 .ui.simple.dimmer {
@@ -222,14 +217,10 @@ body.dimmable > .dimmer {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
         User Overrides
 *******************************/
-

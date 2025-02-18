@@ -24,8 +24,7 @@ export const detailQa: Detail[] = [
           @endeach
         </ul>
         <a class="ui button" href="{{route('posts.create')}}">New</a>
-      @end
-    `,
+      @end`,
   },
   {
     id: 2,
@@ -40,13 +39,13 @@ export const detailQa: Detail[] = [
       router.get('/',({response}:HttpContext)=>{
           response.redirect().toRoute('posts.home')
       })
+
       router.get('/posts',[PostsController,'index']).as('posts.home')
       router.post('/posts',[PostsController,'store']).as('posts.store')
       router.get('/posts/create',[PostsController,'create']).as('posts.create')
       router.get('/posts/:id',[PostsController,'show']).as('posts.show')
       router.get('/posts/:id/edit',[PostsController,'edit']).as('posts.edit')
       router.post('/posts/:id/update',[PostsController,'update']).as('posts.update')
-      router.get('/posts/:id/delete',[PostsController,'destroy']).as('posts.delete')
-    `,
+      router.get('/posts/:id/delete',[PostsController,'destroy']).as('posts.delete')`,
   },
 ]

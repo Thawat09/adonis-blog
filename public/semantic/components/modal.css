@@ -8,7 +8,6 @@
  *
  */
 
-
 /*******************************
              Modal
 *******************************/
@@ -18,16 +17,18 @@
   display: none;
   z-index: 1001;
   text-align: left;
-  background: #FFFFFF;
+  background: #ffffff;
   border: none;
-  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    1px 3px 3px 0px rgba(0, 0, 0, 0.2),
+    1px 3px 15px 2px rgba(0, 0, 0, 0.2);
   transform-origin: 50% 25%;
   flex: 0 0 auto;
   border-radius: 0.28571429rem;
   -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
   will-change: top, left, margin, transform, opacity;
 }
 .ui.modal > :first-child:not(.icon),
@@ -40,11 +41,9 @@
   border-bottom-right-radius: 0.28571429rem;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /*--------------
      Close
@@ -58,7 +57,7 @@
   z-index: 1;
   opacity: 0.8;
   font-size: 1.25em;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 2.25rem;
   height: 2.25rem;
   padding: 0.625rem 0rem 0rem 0rem;
@@ -74,7 +73,7 @@
 .ui.modal > .header {
   display: block;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: #FFFFFF;
+  background: #ffffff;
   margin: 0em;
   padding: 1.25rem 1.5rem;
   box-shadow: none;
@@ -97,7 +96,7 @@
   font-size: 1em;
   line-height: 1.4;
   padding: 1.5rem;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .ui.modal > .image.content {
   display: flex;
@@ -111,13 +110,13 @@
   width: '';
   align-self: top;
 }
-.ui.modal > [class*="top aligned"] {
+.ui.modal > [class*='top aligned'] {
   align-self: top;
 }
-.ui.modal > [class*="middle aligned"] {
+.ui.modal > [class*='middle aligned'] {
   align-self: middle;
 }
-.ui.modal > [class*="stretched"] {
+.ui.modal > [class*='stretched'] {
   align-self: stretch;
 }
 
@@ -149,7 +148,7 @@
 ---------------*/
 
 .ui.modal > .actions {
-  background: #F9FAFB;
+  background: #f9fafb;
   padding: 1rem 1rem;
   border-top: 1px solid rgba(34, 36, 38, 0.15);
   text-align: right;
@@ -161,7 +160,6 @@
 /*-------------------
        Responsive
 --------------------*/
-
 
 /* Modal Width */
 @media only screen and (max-width: 767px) {
@@ -244,8 +242,8 @@
     padding: 1rem 0rem !important;
     box-shadow: none;
   }
-  
-/* Let Buttons Stack */
+
+  /* Let Buttons Stack */
   .ui.modal > .actions {
     padding: 1rem 1rem 0rem !important;
   }
@@ -263,7 +261,6 @@
   box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-
 /*******************************
              Types
 *******************************/
@@ -273,7 +270,7 @@
   border: none;
   border-radius: 0em;
   box-shadow: none !important;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .ui.basic.modal > .header,
 .ui.basic.modal > .content,
@@ -281,7 +278,7 @@
   background-color: transparent;
 }
 .ui.basic.modal > .header {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .ui.basic.modal > .close {
   top: 1rem;
@@ -310,10 +307,9 @@
 /* Tablet and Mobile */
 @media only screen and (max-width: 991px) {
   .ui.basic.modal > .close {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
-
 
 /*******************************
              States
@@ -328,33 +324,30 @@
   display: block;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
    Top Aligned
 ---------------*/
 
-
 /* Top Aligned Modal */
-.modals.dimmer[class*="top aligned"] .modal {
+.modals.dimmer[class*='top aligned'] .modal {
   margin: 5vh auto;
 }
 @media only screen and (max-width: 767px) {
-  .modals.dimmer[class*="top aligned"] .modal {
+  .modals.dimmer[class*='top aligned'] .modal {
     margin: 1rem auto;
   }
 }
 
 /* Legacy Top Aligned */
-.legacy.modals.dimmer[class*="top aligned"] {
+.legacy.modals.dimmer[class*='top aligned'] {
   padding-top: 5vh;
 }
 @media only screen and (max-width: 767px) {
-  .legacy.modals.dimmer[class*="top aligned"] {
+  .legacy.modals.dimmer[class*='top aligned'] {
     padding-top: 1rem;
   }
 }
@@ -362,7 +355,6 @@
 /*--------------
     Scrolling
 ---------------*/
-
 
 /* Scrolling Dimmer */
 .scrolling.dimmable.dimmed {
@@ -573,14 +565,10 @@
   }
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
          Site Overrides
 *******************************/
-

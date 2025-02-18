@@ -8,7 +8,6 @@
  *
  */
 
-
 /*******************************
              Nag
 *******************************/
@@ -38,7 +37,7 @@ a.ui.nag {
 .ui.nag > .title {
   display: inline-block;
   margin: 0em 0.5em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .ui.nag > .close.icon {
   cursor: pointer;
@@ -48,15 +47,13 @@ a.ui.nag {
   right: 1em;
   font-size: 1em;
   margin: -0.5em 0em 0em;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: opacity 0.2s ease;
 }
-
 
 /*******************************
              States
 *******************************/
-
 
 /* Hover */
 .ui.nag:hover {
@@ -67,11 +64,9 @@ a.ui.nag {
   opacity: 1;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
      Static
@@ -107,7 +102,7 @@ a.ui.nag {
 
 .ui.inverted.nags .nag,
 .ui.inverted.nag {
-  background-color: #F3F4F5;
+  background-color: #f3f4f5;
   color: rgba(0, 0, 0, 0.85);
 }
 .ui.inverted.nags .nag .close,
@@ -116,7 +111,6 @@ a.ui.nag {
 .ui.inverted.nag .title {
   color: rgba(0, 0, 0, 0.4);
 }
-
 
 /*******************************
            Groups
@@ -132,14 +126,10 @@ a.ui.nag {
   border-radius: 0.28571429rem 0.28571429rem 0em 0em;
 }
 
-
 /*******************************
          Theme Overrides
 *******************************/
 
-
-
 /*******************************
         User Overrides
 *******************************/
-

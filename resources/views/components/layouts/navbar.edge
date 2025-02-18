@@ -1,0 +1,8 @@
+<div class="ui fixed menu">
+  <div class="ui container">
+    <a class="header item" href="{{ route('home') }}">My Blog</a>
+    @each(main in mainmenu)
+      <a class="item" href="{{ main.link }}">{{ main.menu }}</a>
+    @endeach
+  </div>
+</div>

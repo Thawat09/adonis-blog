@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 5px;
+}
+
+.ui.container {
+  margin-left: 2% !important;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+}

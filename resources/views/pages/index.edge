@@ -1,0 +1,88 @@
+@layouts.master({ title: detail[0].title, mainmenu: mainmenu, submenu: submenu, currentRoute: currentRoute, page: page })
+  @slot('style')
+    <style>
+      pre {
+        position: relative;
+        background-color: #f4f4f4;
+        overflow-x: auto;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .copy-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-color: #4CAF50 !important;
+        color: white !important;
+        border: none !important;
+        padding: 5px 10px !important;
+        cursor: pointer !important;
+        z-index: 10 !important;
+      }
+
+      .copy-btn:hover {
+        background-color: #45a049;
+      }
+
+      .ui.segment {
+        padding: 0;
+      }
+    </style>
+  @end
+  @slot('main')
+    @each(detailItem in detail)
+      <div id="section{{ detailItem.id }}">
+        <h2 class="ui header">
+          {{ detailItem.title }}
+        </h2>
+        <p>
+          &emsp;{{ detailItem.body }}
+        </p>
+        <div class="ui segment">
+          <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
+          <pre id="code-{{ detailItem.id }}">
+            <code>{{ detailItem.code }}</code>
+          </pre>
+        </div>
+      </div>
+    @endeach
+  @end
+
+  @slot('script')
+    <script>
+      $(document).ready(function() {
+        $(".ui.menu .item").on("click", function(e) {
+          var target = $(this).attr("href");
+          var targetElement = $(target);
+          if (targetElement.length) {
+            $("html, body").animate({
+              scrollTop: targetElement.offset().top
+            }, 500);
+          }
+          e.preventDefault();
+        });
+      });
+    </script>
+    <script>
+      var clipboard = new ClipboardJS(".copy-btn", {
+        text: function(trigger) {
+          return $(trigger).prev().text();
+        }
+      });
+
+      clipboard.on("success", function(e) {
+        $(e.trigger).css("background-color", "#4CAF50");
+        $(e.trigger).text("Copied!");
+        setTimeout(function() {
+          $(e.trigger).css("background-color", "");
+          $(e.trigger).text("Copy");
+        }, 2e3);
+      });
+
+      clipboard.on("error", function(e) {
+        alert("Failed to copy!");
+      });
+    </script>
+  @end
+@end

@@ -28,10 +28,10 @@
   </head>
   <body>
     @include('components/layouts/navbar')
-    <div class="ui container" style="margin-top: 7%;">
-      <div class="ui stackable grid">
+    <div style="margin-top: 5%;">
+      <div class="ui stackable grid" style="padding: 2vw;">
         @if(currentRoute != '/blog')
-          <div class="four wide column">
+          <div class="four wide column" >
             @include('components/layouts/sidebar')
           </div>
         @else

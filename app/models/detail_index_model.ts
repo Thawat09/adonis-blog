@@ -13,5 +13,3 @@ export const detailIndex: Detail[] = [
     body: 'บล็อกนี้สร้างขึ้นเพื่อแบ่งปันความรู้เกี่ยวกับการพัฒนาเว็บด้วย AdonisJS',
   },
 ]
-
-]

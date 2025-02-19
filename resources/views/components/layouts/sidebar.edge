@@ -1,11 +1,11 @@
 <div
   class="ui vertical fluid menu"
-  style="position: fixed; width: 20% !important; height: auto; z-index: 100;"
+  style="position: fixed; width: auto !important; height: auto;"
 >
   @each(main in mainmenu)
     @if(main.link === currentRoute)
       <div class="item">
-        <div class="header">
+        <div class="header" style="word-wrap: break-word; word-break: break-word;">
           {{ main.menu }}
         </div>
         @each(sub in submenu)

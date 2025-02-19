@@ -8,4 +8,4 @@ router.get('/', ({ response }: HttpContext) => {
 
 router.get('/blog', [BlogController, 'index']).as('home')
 router.get('/qa', [BlogController, 'qa']).as('qa')
-router.get('/lab5', [BlogController, 'lab5']).as('lab5')
+router.get('/lab', [BlogController, 'lab']).as('lab')

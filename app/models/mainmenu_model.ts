@@ -12,7 +12,7 @@ export const mainmenu: MainMneu[] = [
   },
   {
     id: 2,
-    menu: 'Lab5',
-    link: '/lab5',
+    menu: 'Lab',
+    link: '/lab',
   },
 ]

@@ -8,7 +8,7 @@
         margin: 0;
         padding: 10px;
       }
-      
+
       .copy-btn {
         position: absolute;
         right: 10px;
@@ -20,11 +20,11 @@
         cursor: pointer !important;
         z-index: 10 !important;
       }
-      
+
       .copy-btn:hover {
         background-color: #45a049;
       }
-      
+
       .ui.segment {
         padding: 0;
       }
@@ -33,12 +33,13 @@
   @slot('main')
     @each(detailItem in detail)
       <div id="section{{ detailItem.id }}">
-        <h2 class="ui header">
+        <h1 class="ui header">
           {{ detailItem.title }}
-        </h2>
-        <p>
-          &emsp;{{ detailItem.body }}
-        </p>
+        </h1>
+        <h3 class="ui header">
+          &emsp;{{ detailItem.header }}
+        </h3>
+        <p style="white-space: pre-wrap;">{{ detailItem.body }}</p>
         @if(detailItem.code)
           <div class="ui segment">
             <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
@@ -50,17 +51,19 @@
       </div>
     @endeach
   @end
-  
+
   @slot('script')
     <script>
       $(document).ready(function() {
         $(".ui.menu .item").on("click", function(e) {
           var target = $(this).attr("href");
           var targetElement = $(target);
-          if (targetElement.length) {
-            $("html, body").animate({
-              scrollTop: targetElement.offset().top
-            }, 500);
+
+          if (target && targetElement.length) {
+            targetElement[0].scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
           }
           e.preventDefault();
         });
@@ -72,7 +75,7 @@
           return $(trigger).prev().text();
         }
       });
-      
+
       clipboard.on("success", function(e) {
         $(e.trigger).css("background-color", "#4CAF50");
         $(e.trigger).text("Copied!");
@@ -81,7 +84,7 @@
           $(e.trigger).text("Copy");
         }, 2e3);
       });
-      
+
       clipboard.on("error", function(e) {
         alert("Failed to copy!");
       });

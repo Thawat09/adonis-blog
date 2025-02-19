@@ -14,4 +14,4 @@ export const detailIndex: Detail[] = [
   },
 ]
 
-//hello world from poom
+]

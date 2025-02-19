@@ -33,12 +33,13 @@
   @slot('main')
     @each(detailItem in detail)
       <div id="section{{ detailItem.id }}">
-        <h2 class="ui header">
+        <h1 class="ui header">
           {{ detailItem.title }}
-        </h2>
-        <p>
-          &emsp;{{ detailItem.body }}
-        </p>
+        </h1>
+        <h3 class="ui header">
+          &emsp;{{ detailItem.header }}
+        </h3>
+        <p style="white-space: pre-wrap;">{{ detailItem.body }}</p>
         @if(detailItem.code)
           <div class="ui segment">
             <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
@@ -57,10 +58,22 @@
         $(".ui.menu .item").on("click", function(e) {
           var target = $(this).attr("href");
           var targetElement = $(target);
-          if (targetElement.length) {
-            $("html, body").animate({
-              scrollTop: targetElement.offset().top
-            }, 500);
+
+          if (target && targetElement.length) {
+            console.log('target : ', target);
+            console.log('targetElement : ', targetElement);
+
+            var offsetTop = targetElement.offset().top;
+
+            console.log('offsetTop : ', offsetTop);
+
+            if (offsetTop !== undefined) {
+              $("html, body").stop(true, true).animate({
+                scrollTop: offsetTop
+              }, 2500);
+            } else {
+              console.log("Error: Unable to calculate the offset for ", target);
+            }
           }
           e.preventDefault();
         });

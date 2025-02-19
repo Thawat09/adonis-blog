@@ -5,7 +5,7 @@
   @each(main in mainmenu)
     @if(main.link === currentRoute)
       <div class="item">
-        <div class="header">
+        <div class="header" style="word-wrap: break-word; word-break: break-word;">
           {{ main.menu }}
         </div>
         @each(sub in submenu)

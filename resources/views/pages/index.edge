@@ -60,20 +60,10 @@
           var targetElement = $(target);
 
           if (target && targetElement.length) {
-            console.log('target : ', target);
-            console.log('targetElement : ', targetElement);
-
-            var offsetTop = targetElement.offset().top;
-
-            console.log('offsetTop : ', offsetTop);
-
-            if (offsetTop !== undefined) {
-              $("html, body").stop(true, true).animate({
-                scrollTop: offsetTop
-              }, 2500);
-            } else {
-              console.log("Error: Unable to calculate the offset for ", target);
-            }
+            targetElement[0].scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
           }
           e.preventDefault();
         });

@@ -8,22 +8,11 @@
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <meta name="twitter:title" content="My Blog Adonis" />
     <meta name="twitter:description" content="This is a blog about AdonisJS." />
-    <title>
-      {{ title }}
-    </title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.min.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous">
-
-    </script>
-    <script src="/semantic/semantic.min.js">
-
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js">
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="/semantic/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @if($slots.style)
@@ -32,17 +21,17 @@
   </head>
   <body>
     @include('components/layouts/navbar')
-    <div class="ui container" style="margin-top: 7%;">
+    <div class="ui container" style="margin-top: 10%;">
       <div class="ui stackable grid">
         @if(currentRoute != '/blog')
-          <div class="four wide column">
+          <div class="two wide">
             @include('components/layouts/sidebar')
           </div>
         @else
-          <div class="four wide column">
+          <div class="two wide">
           </div>
         @end
-        <div class="twelve wide column">
+        <div class="fourteen wide" style="margin-left: 250px; overflow-x: auto;">
           @if($slots.main)
             {{{ await $slots.main() }}}
           @end

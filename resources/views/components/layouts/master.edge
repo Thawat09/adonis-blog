@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="/semantic/semantic.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @if($slots.style)
@@ -20,7 +21,7 @@
   </head>
   <body>
     @include('components/layouts/navbar')
-    <div style="margin-top: 5%;">
+    <div>
       <div class="ui stackable grid" style="padding: 2%;">
         @if(currentRoute != '/blog')
           <div class="four wide column">

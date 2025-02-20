@@ -1,13 +1,21 @@
 <div class="ui fixed inverted menu">
   <div class="ui container">
     <a class="header item" href="{{ route('home') }}">
-      <h2>My Blog</h2>
+      <h2>
+        My Blog
+      </h2>
     </a>
     @each(main in mainmenu)
       <a class="item" href="{{ main.link }}">{{ main.menu }}</a>
     @endeach
     <div class="right menu">
-      <a class="item" href="https://github.com/Thawat09/adonis-blog" target="_blank">
+      <a
+        class="item"
+        href="https://github.com/Thawat09/adonis-blog"
+        target="_blank"
+        aria-label="Visit GitHub repository"
+        title="Visit our GitHub page"
+      >
         <i class="github icon"></i>
       </a>
     </div>

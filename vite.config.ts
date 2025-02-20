@@ -8,7 +8,25 @@ export default defineConfig({
       reload: ['resources/views/**/*.edge'],
     }),
   ],
-  build: {
-    sourcemap: true,
+  server: {
+    hmr: false,
+    headers: {
+      'Cache-Control': 'public, max-age=31536000, immutable',
+    },
   },
+  build: {
+    minify: 'esbuild',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('semantic.min.css')) {
+            return 'semantic'
+          }
+        },
+      },
+    },
+  },
+  logLevel: 'silent',
 })

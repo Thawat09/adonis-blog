@@ -28,6 +28,21 @@
       .ui.segment {
         padding: 0;
       }
+
+      .animated-paragraph {
+    animation: fadeInUp 2s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
     </style>
   @end
   @slot('main')
@@ -40,7 +55,7 @@
           <h2 class="ui header">
             &emsp;{{ detailItem.header }}
           </h2>
-          <p style="white-space: pre-wrap;">
+          <p class="animated-paragraph" style="white-space: pre-wrap;">
             {{ detailItem.body }}
           </p>
           @if(detailItem.code)

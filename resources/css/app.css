@@ -5,6 +5,7 @@
 
 html,
 body {
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
@@ -21,4 +22,36 @@ body {
 .navbar {
   position: sticky;
   top: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.ui.fixed.menu {
+  animation: slideIn 0.5s ease-out;
+}
+
+.ui.sidebar {
+  animation: slideIn 0.5s ease-out;
+}
+
+.content-main {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

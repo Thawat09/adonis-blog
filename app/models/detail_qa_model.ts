@@ -10,25 +10,6 @@ export const detailQa: Detail[] = [
   {
     id: 1,
     title: 'Q&A',
-    header: 'Home',
-    body: 'การทำงานของโค้ดส่วนนี้คือ...',
-    code: `
-      @layouts.master({title:"Posts"})
-        <h1 class="ui header">Posts</h1>
-        <ul class="ui bullet list">
-          @each(post in posts)
-            <li>
-              <a href="{{ route('posts.show',{id: post.id}) }}">{{post.title}}
-              </a>
-            </li>
-          @endeach
-        </ul>
-        <a class="ui button" href="{{route('posts.create')}}">New</a>
-      @end`,
-  },
-  {
-    id: 2,
-    title: '',
     header: 'Routes',
     body: `
     โค้ดนี้ใช้สำหรับกำหนดเส้นทาง (routing) ในแอปพลิเคชัน AdonisJS ซึ่งจะช่วยจัดการคำขอ HTTP สำหรับระบบคำถามและคำตอบ (Q&A). โดยเริ่มจากการใช้ router.get() และ router.post() เพื่อกำหนดเส้นทางต่างๆ เช่น การเปลี่ยนเส้นทางไปที่หน้า "qa.home" เมื่อเข้าถึงเส้นทางหลัก (/).

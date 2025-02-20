@@ -31,25 +31,29 @@
     </style>
   @end
   @slot('main')
-    @each(detailItem in detail)
-      <div id="section{{ detailItem.id }}">
-        <h1 class="ui header">
-          {{ detailItem.title }}
-        </h1>
-        <h3 class="ui header">
-          &emsp;{{ detailItem.header }}
-        </h3>
-        <p style="white-space: pre-wrap;">{{ detailItem.body }}</p>
-        @if(detailItem.code)
-          <div class="ui segment">
-            <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
-            <pre id="code-{{ detailItem.id }}">
-              <code>{{ detailItem.code }}</code>
-            </pre>
-          </div>
-        @end
-      </div>
-    @endeach
+    <div>
+      @each(detailItem in detail)
+        <div id="section{{ detailItem.id }}">
+          <h1 class="ui header">
+            {{ detailItem.title }}
+          </h1>
+          <h2 class="ui header">
+            &emsp;{{ detailItem.header }}
+          </h2>
+          <p style="white-space: pre-wrap;">
+            {{ detailItem.body }}
+          </p>
+          @if(detailItem.code)
+            <div class="ui segment">
+              <button class="ui button copy-btn" data-clipboard-target="#code-{{ detailItem.id }}">Copy</button>
+              <pre id="code-{{ detailItem.id }}">
+                <code>{{ detailItem.code }}</code>
+              </pre>
+            </div>
+          @end
+        </div>
+      @endeach
+    </div>
   @end
 
   @slot('script')
@@ -58,7 +62,6 @@
         $(".ui.menu .item").on("click", function(e) {
           var target = $(this).attr("href");
           var targetElement = $(target);
-
           if (target && targetElement.length) {
             targetElement[0].scrollIntoView({
               behavior: "smooth",

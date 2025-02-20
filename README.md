@@ -1,3 +1,4 @@
+# Build image docker, push to azure and docker hub 
 1. docker build -t blog .
 2. docker tag blog testwebcontainerregistry.azurecr.io/blog:latest
 3. docker push testwebcontainerregistry.azurecr.io/blog:latest
